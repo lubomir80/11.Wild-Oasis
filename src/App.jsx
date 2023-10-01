@@ -8,6 +8,7 @@ import AccountPage from "./pages/AccountPage"
 import LoginPage from "./pages/LoginPage"
 import NotFoundOage from "./pages/NotFoundOage"
 import AppLayout from "./ui/AppLayout"
+import CabinsPage from "./pages/CabinsPage."
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                   <Route index element={<Navigate replace to="dashbord" />} />
                   <Route path="dashbord" element={<DashbordPage />} />
                   <Route path="bookings" element={<BookingsPage />} />
+                  <Route path="cabins" element={<CabinsPage />} />
                   <Route path="users" element={<UsersPage />} />
                   <Route path="settings" element={<SettingsPage />} />
                   <Route path="account" element={<AccountPage />} />
