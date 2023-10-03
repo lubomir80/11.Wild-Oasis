@@ -4,9 +4,9 @@ import { getCabins } from "../services/apiCabins"
 import Row from "../ui/Row"
 
 
+
+
 function CabinsPage() {
-
-
 
    return (
       <>

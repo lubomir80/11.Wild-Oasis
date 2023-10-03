@@ -1,4 +1,4 @@
-import React from 'react'
+import toast from 'react-hot-toast';
 import styled from 'styled-components'
 import { formatCurrency } from '../../utils/helpers';
 import { useMutation, useQueryClient } from "@tanstack/react-query";
@@ -60,13 +60,13 @@ function CabinRow({ cabin }) {
    const { isLoading, mutate } = useMutation({
       mutationFn: deleteCabin,
       onSuccess: () => {
-         alert("Cabin successfully deleted")
+         toast.success("Cabin successfully deleted")
          queryClient.invalidateQueries({
             queryKey: ['cabins']
          })
       },
       onError: error => {
-         alert(error.message)
+         toast.error(error.message)
       }
    })
 
