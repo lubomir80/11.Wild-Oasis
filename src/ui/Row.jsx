@@ -10,7 +10,7 @@ const Row = styled.div`
    ${({ type }) => type === "vertical" &&
       css`
       flex-direction: column;
-      gap:1.6rem
+      gap:1.6rem;
    `}
       
    display: flex;
