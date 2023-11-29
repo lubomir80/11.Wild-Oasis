@@ -9,7 +9,7 @@ import { Fileinput, Form, Input, Textarea } from "./CreateCabinFormStyled";
 
 
 
-function CreateCabinForm({ cabinToEdit = {} }) {
+function CreateCabinForm({ cabinToEdit = {}, onModalClose }) {
    const { id: editId, ...editValues } = cabinToEdit;
    const isEditSession = Boolean(editId)
 
@@ -63,7 +63,9 @@ function CreateCabinForm({ cabinToEdit = {} }) {
 
 
    return (
-      <Form onSubmit={handleSubmit(onSubmit, onError)}>
+      <Form
+         onSubmit={handleSubmit(onSubmit, onError)}
+         type={onModalClose ? "modal" : "regular"}>
          <FormRow error={errors?.name?.message} label="Cabin name">
             <Input
                type="text"
@@ -129,7 +131,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
                })} />
          </FormRow>
          <FormRow>
-            <Button variations="secondary" type="reset">Cancel</Button>
+            <Button onClick={() => onModalClose?.()} variations="secondary" type="reset">Cancel</Button>
             <Button disabled={isWorking}>
                {isEditSession ? "Edit cabin" : "Create new cabin"}
             </Button>
