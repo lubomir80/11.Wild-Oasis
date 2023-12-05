@@ -9,7 +9,6 @@ import CabinTableOperation from "../features/cabins/CAbinTableOperation"
 
 function CabinsPage() {
 
-
    return (
       <>
          <Row>
