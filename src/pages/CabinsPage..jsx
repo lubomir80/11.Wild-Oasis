@@ -2,6 +2,7 @@ import { Heading } from "theme-ui"
 import CabinTable from "../features/cabins/CabinTable"
 import Row from "../ui/Row"
 import AddCabin from "../features/cabins/AddCabin"
+import CabinTableOperation from "../features/cabins/CAbinTableOperation"
 
 
 
@@ -13,7 +14,7 @@ function CabinsPage() {
       <>
          <Row>
             <Heading as="h1">All cabins</Heading>
-            <p>Filter / Sort</p>
+            <CabinTableOperation />
          </Row>
          <Row type="vertical">
             <CabinTable />
