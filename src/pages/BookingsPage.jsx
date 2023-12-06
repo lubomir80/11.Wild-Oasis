@@ -1,7 +1,15 @@
+import BookingsTable from "../features/bookings/BookingsTable"
+import Heading from "../ui/Heading"
 
 function BookingsPage() {
    return (
-      <div>Bookings</div>
+      <>
+         <div>
+            <Heading as="h1">All bookings</Heading>
+            <p>TEST</p>
+         </div>
+         <BookingsTable />
+      </>
    )
 }
 
